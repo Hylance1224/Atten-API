@@ -51,18 +51,17 @@ Updated version of each package is acceptable.&#x20;
 
 | Name                 | Type   | Description                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| data                 | Folder | Data files required for the experiment. Specifically: **relation\_shuffle.json** contains the apps used in the experiment and their corresponding TPLs. **app\_info.json** contains the description texts for each app, which are crawled from app stores or third-party websites. **app\_function.json** contains the functionas extracted from each app description text. |
-| train\_model.py      | File   | Model training python file of AttenTPL                                                                                                                                                                                                                                                                                                                                      |
-| test\_model.py       | File   | Model testing python file of AttenTPL                                                                                                                                                                                                                                                                                                                                       |
-| model\_Atten\_TPL.py | File   | Model modules of AttenTPL                                                                                                                                                                                                                                                                                                                                                   |
-| utility              | Folder | Tools and essential libraries used by AttenTPL                                                                                                                                                                                                                                                                                                                              |
-| function feature     | Folder | The vectoring results of app functions.                                                                                                                                                                                                                                                                                                                                     |
+| data                 | Folder | Data files required for the experiment. Specifically: **relation.json** contains the mashups used in the experiment and their corresponding APIs. |
+| train\_model.py      | File   | Model training python file of Atten-API                                                                                                                                                                                                                                                                                                                                      |
+| test\_model.py       | File   | Model testing python file of Atten-API                                                                                                                                                                                                                                                                                                                                       |
+| model\_Atten\_API.py | File   | Model modules of Atten-API                                                                                                                                                                                                                                                                                                                                                   |
+| utility              | Folder | Tools and essential libraries used by Atten-API                                                                                                                                                                                                                                                                                                                              |
 
-### 1.4 Other Important module of Atten-TPL
+### 1.4 Other Important module of Atten-API
 
 #### 1.4.1 Obtaining app functions from description
 
-Users could obtain app functions from description by executing the **obtain\_function.py**. The program utilizes GPT-3.5 Turbo model to analyze the description text of the app and extract its functions.
+Users could obtain functions from description by executing the **obtain\_function.py**. The program utilizes GPT-3.5 Turbo model to analyze the description text and extract its functions.
 
 1.  **Obtain an API Key**
 
@@ -74,11 +73,11 @@ Users could obtain app functions from description by executing the **obtain\_fun
 
 3.  **Execute the Program**
 
-    Locate `description = ""` on line 32 and insert the app description within the quotation marks. Then, execute the program to obtain app functions.
+    Locate `description = ""` on line 32 and insert the description within the quotation marks. Then, execute the program to obtain functions.
 
-#### 1.4.2 Vectoring app function
+#### 1.4.2 Vectoring functions
 
-Users could represents the function list of app product with a vector by executing the **vectoring\_function.py**. The program represents the function list with a vector by utilizing the Sentence-Bert model.
+Users could represents the function list of mashup with a vector by executing the **vectoring\_function.py**. The program represents the function list with a vector by utilizing the Sentence-Bert model.
 
 1.  **Install dependency**
 
@@ -86,5 +85,5 @@ Users could represents the function list of app product with a vector by executi
 
 2.  **Execute the Program**
 
-    Provide the list of function sentences in the `functions` variable. Then, execute the program to obtain obtain feature vectors for app functions.
+    Provide the list of function sentences in the `functions` variable. Then, execute the program to obtain obtain feature vectors for mashup functions.
 

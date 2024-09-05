@@ -17,8 +17,6 @@
 
 3.  **Model testing**
 
-    Locate `description = ""` on line 32 and insert the app description within the quotation marks. Then, execute the program to obtain app functions.
-
     Start Python in COMMAND LINE mode, then use the following statement (one line in the COMMAND Prompt window) to execute **test\_model.py**:
 
         python test_model.py --test_dataset testing_0_3.json
@@ -59,9 +57,9 @@ Updated version of each package is acceptable.&#x20;
 
 ### 1.4 Other Important module of Atten-API
 
-#### 1.4.1 Obtaining app functions from description
+#### 1.4.1 Obtaining functions from description
 
-Users could obtain functions from description by executing the **obtain\_function.py**. The program utilizes GPT-3.5 Turbo model to analyze the description text and extract its functions.
+Users could obtain functions from description by executing the **obtain\_function.py**. The program utilizes GPT-4.0 Turbo model to analyze the description text and extract its functions.
 
 1.  **Obtain an API Key**
 

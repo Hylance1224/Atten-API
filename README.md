@@ -55,33 +55,4 @@ Updated version of each package is acceptable.&#x20;
 | model\_Atten\_API.py | File   | Model modules of Atten-API                                                                                                                        |
 | utility              | Folder | Tools and essential libraries used by Atten-API                                                                                                   |
 
-### 1.4 Other Important module of Atten-API
-
-#### 1.4.1 Obtaining functions from description
-
-Users could obtain functions from description by executing the **obtain\_function.py**. The program utilizes GPT-4.0 Turbo model to analyze the description text and extract its functions.
-
-1.  **Obtain an API Key**
-
-    Before using this program, you need an OpenAI API key. If you don't have one yet, you can register and obtain it from the [OpenAI website](https://openai.com/).
-
-2.  **Configure the API Key**
-
-    In the code file **obtain\_function.py**, locate `openai.api_key = ""` on line 8 and insert your API key within the quotation marks.
-
-3.  **Execute the Program**
-
-    Locate `description = ""` on line 32 and insert the description within the quotation marks. Then, execute the program to obtain functions.
-
-#### 1.4.2 Vectoring functions
-
-Users could represents the function list of mashup with a vector by executing the **vectoring\_function.py**. The program represents the function list with a vector by utilizing the Sentence-Bert model.
-
-1.  **Install dependency**
-
-    Ensure you have the necessary dependency installed. You can install it using the pip command: `pip install -U Sentence-transformers`
-
-2.  **Execute the Program**
-
-    Provide the list of function sentences in the `functions` variable. Then, execute the program to obtain obtain feature vectors for mashup functions.
 
